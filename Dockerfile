@@ -1,4 +1,4 @@
-FROM movies/liaohongbin as builder
+FROM registry.cn-hangzhou.aliyuncs.com/movies/liaohongbin:latest as builder
 WORKDIR /com/liao/
 COPY ./ /com/liao/
 RUN mvn clean -Dmaven.test.skip=true package
