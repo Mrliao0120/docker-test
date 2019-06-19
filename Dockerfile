@@ -1,4 +1,4 @@
-FROM liaohongbin/liao:latest as builder
+FROM movies/liaohongbin:latest as builder
 WORKDIR /com/liao/
 COPY ./ /com/liao/
 RUN mvn clean -Dmaven.test.skip=true package
