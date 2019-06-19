@@ -10,7 +10,7 @@
 FROM registry.cn-hangzhou.aliyuncs.com/movies/liaohongbin:latest as builder
 FROM  maven
 WORKDIR /app/liao/
-COPY ./ /app/liao/
+
 RUN mvn clean -Dmaven.test.skip=true package
 
 FROM java:8
