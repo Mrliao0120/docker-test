@@ -1,2 +1,7 @@
 server:
   port: 6666
+  servlet:
+    context-path: /liao
+spring:
+  application:
+    name: liao

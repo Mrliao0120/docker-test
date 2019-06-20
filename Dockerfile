@@ -15,3 +15,5 @@ RUN mvn clean -Dmaven.test.skip=true package
 
 FROM java:8
 COPY --from=builder2  /app/liao/target/docker-test.jar /app/jar/app.jar
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["java","-jar","/app.jar"]
