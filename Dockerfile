@@ -13,5 +13,5 @@ WORKDIR /app/liao/
 COPY ./ /app/liao/
 RUN mvn clean -Dmaven.test.skip=true package
 
-FROM java:8
-COPY --from=builder  /app/liao/target/docker-test.jar /app/jar/app.jar
+#FROM java:8
+#COPY --from=builder  /app/liao/target/docker-test.jar /app/jar/app.jar
